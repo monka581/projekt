@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         nazwaAplikacji =findViewById(R.id.Tytuł_aplikacji)
         wybierzTryb = findViewById(R.id.wybierzTryb)
         zoo = findViewById(R.id.zoo)
