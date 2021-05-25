@@ -31,11 +31,39 @@ class MainActivity : AppCompatActivity() {
                 openLayoutFarma()
         }
         })
-
+        pojazdy?.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(v:View?){
+                openLayoutPojazdy()
+            }
+        })
+        zoo?.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(v:View?){
+                openLayoutZoo()
+            }
+        })
+        instrumenty?.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(v:View?){
+                openLayoutInstrumenty()
+            }
+        })
 
     }
+
+
     private fun openLayoutFarma(){
         val intent = Intent(this, FarmaLayout::class.java)
+        startActivity(intent)
+    }
+    private fun openLayoutPojazdy(){
+        val intent = Intent(this, PojazdyLayout::class.java)
+        startActivity(intent)
+    }
+    private fun openLayoutZoo(){
+        val intent = Intent(this, ZooLayout::class.java)
+        startActivity(intent)
+    }
+    private fun openLayoutInstrumenty(){
+        val intent = Intent(this, InstrumentyLayout::class.java)
         startActivity(intent)
     }
 }
